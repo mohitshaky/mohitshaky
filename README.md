@@ -49,6 +49,7 @@ I build **production-grade backend systems** for enterprise clients — event-dr
 | [subscription-workflow-service](https://github.com/mohitshaky/subscription-workflow-service) | BPMN process orchestration — Flowable delegates, Kafka listeners, MongoDB | Spring Boot · Flowable · Kafka · MongoDB |
 | [banking-account-service](https://github.com/mohitshaky/banking-account-service) | Event-driven banking — Kafka producer/consumer pipeline, audit trail | Spring Boot · Kafka · MongoDB |
 | [telecom-subscription-service](https://github.com/mohitshaky/telecom-subscription-service) | Telecom plan management REST API with JWT auth | Spring Boot · MySQL · JWT |
+| [offer-promo-engine](https://github.com/mohitshaky/offer-promo-engine) | Promo code engine — Redis cache, K8s manifests, Prometheus monitoring, OAuth2 JWT | Spring Boot · Redis · PostgreSQL · Kubernetes |
 | [banking-dashboard](https://github.com/mohitshaky/banking-dashboard) | Fintech dashboard UI — Canvas charts, CSV export, transactions, responsive | HTML · CSS · JavaScript |
 
 ---
@@ -62,6 +63,7 @@ I build **production-grade backend systems** for enterprise clients — event-dr
 | [banking-account-service](https://github.com/mohitshaky/banking-account-service) | Kafka · MongoDB | ✅ Live |
 | [telecom-subscription-service](https://github.com/mohitshaky/telecom-subscription-service) | JWT · MySQL | ✅ Live |
 | [workflow-approval-engine](https://github.com/mohitshaky/workflow-approval-engine) | PostgreSQL · Redis · OAuth2 | ✅ Live |
+| [offer-promo-engine](https://github.com/mohitshaky/offer-promo-engine) | Redis · PostgreSQL · Kubernetes · Prometheus | ✅ Live |
 | [banking-dashboard](https://github.com/mohitshaky/banking-dashboard) | HTML · CSS · JavaScript | ✅ [Live Demo](https://mohitshaky.github.io/banking-dashboard) |
 
 ---
