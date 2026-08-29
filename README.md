@@ -1,73 +1,59 @@
-<h1 align="center">Hi, I'm Mohit 👋</h1>
-<h3 align="center">Java Backend Developer · 6+ Years · Bangalore, India</h3>
+# Mohit Shakya
 
-<p align="center">
-  <a href="https://mohitshaky.github.io"><img src="https://img.shields.io/badge/Portfolio-mohitshaky.github.io-1a73e8?style=flat&logo=google-chrome&logoColor=white"/></a>
-  <a href="mailto:mohitshakya797@gmail.com"><img src="https://img.shields.io/badge/Email-mohitshakya797%40gmail.com-blue?style=flat&logo=gmail"/></a>
-  <a href="https://linkedin.com/in/mohit-shakya-9ab944110"><img src="https://img.shields.io/badge/LinkedIn-Mohit_Shakya-0077B5?style=flat&logo=linkedin"/></a>
-  <img src="https://komarev.com/ghpvc/?username=mohitshaky&color=blue&style=flat" alt="profile views"/>
-</p>
+Backend engineer, seven years on telecom and banking systems. Spring Boot, Kafka,
+and the unglamorous work of making them fast again once they are not.
 
----
-
-### 🚀 What I Do
-
-I build **production-grade backend systems** for enterprise clients — event-driven microservices, workflow orchestration, scalable REST APIs, and performance-tuned systems.
-
-- 🔧 **Spring Boot** microservices in telecom & banking domains
-- 📨 **Apache Kafka** — event-driven pipelines, producers, consumers, handlers
-- ⚙️ **BPMN / Flowable** — process orchestration with JavaDelegate pattern
-- 🍃 **MongoDB** + **MySQL** / **PostgreSQL** — multi-database architectures
-- ⚡ **Performance Tuning** — JVM, Kafka consumer lag, slow query analysis, API latency
-- 🐳 **Docker** + **Kubernetes** + **Helm** — cloud-native deployments
-- 🔐 **Spring Security** + **JWT** — stateless auth
-- 📋 **Swagger / OpenAPI** — full API documentation
+I take freelance and contract work — building services, fixing slow ones, and
+lately getting AI features into Java codebases that were never designed for them.
+Fixed prices, agreed before I start: **[mohitshaky.github.io](https://mohitshaky.github.io)**
 
 ---
 
-### 🛠️ Tech Stack
+### What I actually do
 
-<p>
-  <img src="https://img.shields.io/badge/Java-17-ED8B00?style=flat&logo=java"/>
-  <img src="https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=flat&logo=springboot"/>
-  <img src="https://img.shields.io/badge/Apache_Kafka-black?style=flat&logo=apachekafka"/>
-  <img src="https://img.shields.io/badge/Flowable_BPMN-orange?style=flat"/>
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=flat&logo=mongodb"/>
-  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat&logo=mysql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Gradle-02303A?style=flat&logo=gradle"/>
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=flat&logo=kubernetes&logoColor=white"/>
-</p>
+Most of what I get called in for falls into four buckets:
 
----
+**Build a service properly.** REST APIs, Kafka pipelines, BPMN-driven workflows.
+Tests, Swagger, Docker and a runbook, so your team can take it over without me.
 
-### 📌 Featured Projects
+**Make it fast.** Consumer lag that never recovers, p99 that has doubled over two
+releases, queries nobody has looked at since they were written. I measure first,
+change second, and measure again.
 
-| Project | Description | Stack |
-|---------|-------------|-------|
-| [order-lifecycle-bpmn](https://github.com/mohitshaky/order-lifecycle-bpmn) | Enterprise order fulfillment — Flowable BPMN, Kafka events, multi-tenancy | Spring Boot · Flowable · Kafka · MongoDB |
-| [subscription-workflow-service](https://github.com/mohitshaky/subscription-workflow-service) | BPMN process orchestration — Flowable delegates, Kafka listeners, MongoDB | Spring Boot · Flowable · Kafka · MongoDB |
-| [banking-account-service](https://github.com/mohitshaky/banking-account-service) | Event-driven banking — Kafka producer/consumer pipeline, audit trail | Spring Boot · Kafka · MongoDB |
-| [telecom-subscription-service](https://github.com/mohitshaky/telecom-subscription-service) | Telecom plan management REST API with JWT auth | Spring Boot · MySQL · JWT |
-| [banking-dashboard](https://github.com/mohitshaky/banking-dashboard) | Fintech dashboard UI — Canvas charts, CSV export, transactions, responsive | HTML · CSS · JavaScript |
+**Make it visible.** Tracing, metrics and logs that let the next incident be
+diagnosed from a dashboard instead of by reading log files line by line.
+
+**Add AI without breaking the compliance story.** Retrieval over your own
+documents, running inside your existing Spring estate, with citations, guardrails
+and a cost ceiling.
 
 ---
 
-### 🚀 Live Projects
+### Repositories worth your time
 
-| Project | Stack | Status |
-|---------|-------|--------|
-| [order-lifecycle-bpmn](https://github.com/mohitshaky/order-lifecycle-bpmn) | Flowable · Kafka · MongoDB | ✅ Live |
-| [subscription-workflow-service](https://github.com/mohitshaky/subscription-workflow-service) | Flowable · Kafka · MongoDB | ✅ Live |
-| [banking-account-service](https://github.com/mohitshaky/banking-account-service) | Kafka · MongoDB | ✅ Live |
-| [telecom-subscription-service](https://github.com/mohitshaky/telecom-subscription-service) | JWT · MySQL | ✅ Live |
-| [workflow-approval-engine](https://github.com/mohitshaky/workflow-approval-engine) | PostgreSQL · Redis · OAuth2 | ✅ Live |
-| [banking-dashboard](https://github.com/mohitshaky/banking-dashboard) | HTML · CSS · JavaScript | ✅ [Live Demo](https://mohitshaky.github.io/banking-dashboard) |
+| | |
+|---|---|
+| **[enterprise-rag-service](https://github.com/mohitshaky/enterprise-rag-service)** | RAG built like a real service, not a notebook. Spring AI over pgvector, multi-tenant isolation proved by test, a grounding check that refuses rather than fabricates, versioned prompts, per-tenant token budgets. |
+| **[order-lifecycle-bpmn](https://github.com/mohitshaky/order-lifecycle-bpmn)** | Telecom order orchestration where the BPMN process definition is the source of truth rather than sequencing scattered across services. |
+| **[banking-account-service](https://github.com/mohitshaky/banking-account-service)** | Append-only account events with an audit projection that can be rebuilt from the log alone. |
+| **[offer-promo-engine](https://github.com/mohitshaky/offer-promo-engine)** | Promotion eligibility on the request path, where cache design and rule ordering decide whether you make the latency budget. |
 
 ---
 
-### 💼 Available for Freelance
+### Tools
 
-I'm currently available for **freelance projects** — backend APIs, microservices, Kafka integrations, BPMN workflows, **performance tuning**.
+Java 17 / 21 · Spring Boot 3 · Spring AI · Apache Kafka · Flowable BPMN ·
+PostgreSQL · pgvector · MongoDB · MySQL · Redis · Docker · Kubernetes ·
+Prometheus · OpenTelemetry · Gradle
 
-📩 **[mohitshakya797@gmail.com](mailto:mohitshakya797@gmail.com)** · [Portfolio](https://mohitshaky.github.io) · [LinkedIn](https://linkedin.com/in/mohit-shakya-9ab944110)
+---
+
+### Getting hold of me
+
+Currently taking new work. The quickest route is the contact form on
+[mohitshaky.github.io](https://mohitshaky.github.io), or
+[LinkedIn](https://linkedin.com/in/mohit-shakya-9ab944110).
+
+If your system is slow and you are not sure why, tell me what it does and what it
+is doing wrong. I will tell you honestly whether it is worth paying anyone to
+look at it.
