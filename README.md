@@ -1,59 +1,67 @@
 # Mohit Shakya
 
-Backend engineer, seven years on telecom and banking systems. Spring Boot, Kafka,
-and the unglamorous work of making them fast again once they are not.
+I fix Kafka pipelines and Spring Boot services that are falling behind in production.
 
-I take freelance and contract work — building services, fixing slow ones, and
-lately getting AI features into Java codebases that were never designed for them.
-Fixed prices, agreed before I start: **[mohitshaky.github.io](https://mohitshaky.github.io)**
+Seven years of that on telecom and banking systems — the kind that move money and
+provision networks, where falling behind is an incident rather than a ticket. I work
+independently now, with fintech and telecom teams who need that experience for a few
+weeks rather than as a permanent hire.
 
----
-
-### What I actually do
-
-Most of what I get called in for falls into four buckets:
-
-**Build a service properly.** REST APIs, Kafka pipelines, BPMN-driven workflows.
-Tests, Swagger, Docker and a runbook, so your team can take it over without me.
-
-**Make it fast.** Consumer lag that never recovers, p99 that has doubled over two
-releases, queries nobody has looked at since they were written. I measure first,
-change second, and measure again.
-
-**Make it visible.** Tracing, metrics and logs that let the next incident be
-diagnosed from a dashboard instead of by reading log files line by line.
-
-**Add AI without breaking the compliance story.** Retrieval over your own
-documents, running inside your existing Spring estate, with citations, guardrails
-and a cost ceiling.
+Fixed prices with the engineering hours stated: **[mohitshaky.github.io](https://mohitshaky.github.io)**
 
 ---
 
-### Repositories worth your time
+### What I get called in for
+
+**Consumers that can't keep up.** Lag climbs under load and never fully recovers.
+Usually partitioning, poison messages, or work being done inside the poll loop.
+
+**Latency that has drifted.** p99 doubled across two releases and nobody can point at
+the change. Typically connection pools, N+1 access, or GC pressure.
+
+**Systems nobody can see into.** An incident happens and the team reads logs line by
+line. Tracing, metrics that map to user impact, and an agreed error budget fix that.
+
+**AI stuck in a prototype.** A notebook demo works, but nobody can get it into a
+regulated Java platform with citations, guardrails and a cost ceiling.
+
+---
+
+### Read the code before you decide anything
 
 | | |
 |---|---|
-| **[enterprise-rag-service](https://github.com/mohitshaky/enterprise-rag-service)** | RAG built like a real service, not a notebook. Spring AI over pgvector, multi-tenant isolation proved by test, a grounding check that refuses rather than fabricates, versioned prompts, per-tenant token budgets. |
-| **[order-lifecycle-bpmn](https://github.com/mohitshaky/order-lifecycle-bpmn)** | Telecom order orchestration where the BPMN process definition is the source of truth rather than sequencing scattered across services. |
-| **[banking-account-service](https://github.com/mohitshaky/banking-account-service)** | Append-only account events with an audit projection that can be rebuilt from the log alone. |
-| **[offer-promo-engine](https://github.com/mohitshaky/offer-promo-engine)** | Promotion eligibility on the request path, where cache design and rule ordering decide whether you make the latency budget. |
+| **[order-lifecycle-bpmn](https://github.com/mohitshaky/order-lifecycle-bpmn)** | Telecom order orchestration where the BPMN process definition is the source of truth. Asynchronous provisioning over Kafka, so a slow downstream system never occupies a thread. Multi-tenant with tenant as the partition key. |
+| **[banking-account-service](https://github.com/mohitshaky/banking-account-service)** | Append-only account events with an audit projection rebuildable from the log alone. Idempotent consumers that survive at-least-once redelivery without double-applying a transfer. |
+| **[offer-promo-engine](https://github.com/mohitshaky/offer-promo-engine)** | Promotion eligibility on the checkout path. Checks ordered by cost so the cheap rejections happen first; definitions cached, usage counts deliberately not — that boundary is where the classic promo-engine bug lives. |
+| **[subscription-workflow-service](https://github.com/mohitshaky/subscription-workflow-service)** | Subscription lifecycle as an explicit, versioned process rather than implicit sequencing between services, with compensating paths for failed provisioning. |
+| **[enterprise-rag-service](https://github.com/mohitshaky/enterprise-rag-service)** | Retrieval-augmented generation built as an ordinary Spring service. Multi-tenant isolation proved by integration test, a grounding policy that refuses instead of fabricating, versioned prompts, per-tenant token budgets. Spring AI over pgvector. |
+
+---
+
+### Working hours, in your clock
+
+09:00–17:00 CET every working day · 08:00–12:00 ET Monday to Thursday · a full working
+day with Dubai, Riyadh and Doha · 5+ hours with Singapore.
+
+I work the Gulf week — available Sunday through Thursday.
 
 ---
 
 ### Tools
 
-Java 17 / 21 · Spring Boot 3 · Spring AI · Apache Kafka · Flowable BPMN ·
-PostgreSQL · pgvector · MongoDB · MySQL · Redis · Docker · Kubernetes ·
-Prometheus · OpenTelemetry · Gradle
+Java 17 / 21 · Spring Boot 3 · Apache Kafka · Flowable BPMN · Spring AI · PostgreSQL ·
+pgvector · MongoDB · MySQL · Redis · Docker · Kubernetes · Prometheus · OpenTelemetry ·
+Testcontainers · Gradle
 
 ---
 
 ### Getting hold of me
 
-Currently taking new work. The quickest route is the contact form on
+Currently taking work, two clients at a time. Fastest route is the contact form on
 [mohitshaky.github.io](https://mohitshaky.github.io), or
 [LinkedIn](https://linkedin.com/in/mohit-shakya-9ab944110).
 
-If your system is slow and you are not sure why, tell me what it does and what it
-is doing wrong. I will tell you honestly whether it is worth paying anyone to
-look at it.
+Send me one repository or one endpoint that is too slow and I will send back three
+specific fixes, written down, within two working days. Free, two a week, no obligation —
+take the findings to your own team if you like.
